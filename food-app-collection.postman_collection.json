@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "12f3b5db-b514-4383-a695-5b5026419b2f",
+		"name": "food-app-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10684550"
+	},
+	"item": [
+		{
+			"name": "like restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"1\",\r\n    \"res_id\": \"2\",\r\n    \"date_like\": \"2022-01-01 09:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/api/like/like-restaurant"
+			},
+			"response": []
+		},
+		{
+			"name": "delete like restaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"1\",\r\n    \"res_id\": \"2\",\r\n    \"date_like\": \"2022-01-01 09:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/api/like/unlike-restaurant"
+			},
+			"response": []
+		},
+		{
+			"name": "get like by user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{domain}}/api/like/get-like-by-user/1"
+			},
+			"response": []
+		},
+		{
+			"name": "get like by restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{domain}}/api/like/get-like-by-restaurant/1"
+			},
+			"response": []
+		},
+		{
+			"name": "rate restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"res_id\": 3,\r\n    \"amount\": 300,\r\n    \"date_rate\": \"2022-01-01 09:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/api/rate/rate-restaurant"
+			},
+			"response": []
+		},
+		{
+			"name": "delete rate restaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"res_id\": 3,\r\n    \"amount\": 300,\r\n    \"date_rate\": \"2022-01-01 09:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/api/rate/delete-rate-restaurant"
+			},
+			"response": []
+		},
+		{
+			"name": "get rate by user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{domain}}/api/rate/get-rate-by-user/1"
+			},
+			"response": []
+		},
+		{
+			"name": "get rate by restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{domain}}/api/rate/get-rate-by-restaurant/1"
+			},
+			"response": []
+		},
+		{
+			"name": "create order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 1,\r\n    \"food_id\": 2,\r\n    \"amount\": 300,\r\n    \"code\": \"009\",\r\n    \"arr_sub_id\": \"[1,2]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{domain}}/api/order/create-order"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
